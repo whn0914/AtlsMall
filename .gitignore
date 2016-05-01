@@ -1,0 +1,8 @@
+# 排除target目录
+target/*
+
+# 排除.idea目录
+.idea/*
+
+# 排除.iml文件
+*.iml
