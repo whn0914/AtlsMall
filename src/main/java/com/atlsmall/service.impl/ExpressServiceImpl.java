@@ -38,6 +38,7 @@ public class ExpressServiceImpl implements ExpressService {
     public List<OrderWithExpressResp> getOrders(String phone) {
         List<OrderWithExpressResp> res = new ArrayList<>();
         OrderMgrExample mgrExample = new OrderMgrExample();
+        mgrExample.setOrderByClause("O_NO desc");
         OrderMgrExample.Criteria mgrCriteria = mgrExample.createCriteria();
         List<String> orderStatus = new ArrayList<>();
         orderStatus.add(OrderStatus.EXPRESSING.getCode());
